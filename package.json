@@ -19,7 +19,7 @@
     "start": "node ./dist/bin/venok.js",
     "test": "jest --config test/jest-config.js",
     "test:dev": "npm run clean && jest --config test/jest-config.js --watchAll",
-    "lint": "eslint \"{actions,commands,src,test}/**/*.ts\" --fix",
+    "lint": "eslint \"{actions,commands,src}/**/*.ts\" --fix",
     "format": "prettier --write \"**/*.ts\"",
     "prerelease": "npm run build",
     "release": "release-it"
