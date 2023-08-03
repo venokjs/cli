@@ -49,7 +49,6 @@ export class BuildAction extends AbstractAction {
     commandOptions: Input[],
     watchMode: boolean,
     watchAssetsMode: boolean,
-    isDebugEnabled = false,
     onSuccess?: () => void,
   ) {
     const configFileName = commandOptions.find((option) => option.name === "config")!.value as string;

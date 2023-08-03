@@ -31,6 +31,7 @@ export class SwcBinaryLoader {
     if (this.swcBinary) return this.swcBinary;
 
     try {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
       const swcBinary = require("@swc/cli/lib/swc/dir");
       this.swcBinary = swcBinary;
       return swcBinary;

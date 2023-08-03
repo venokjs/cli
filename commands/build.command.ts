@@ -27,7 +27,7 @@ export class BuildCommand extends AbstractCommand {
       .option("--type-check", "Enable type checking (when SWC is used).")
       .option("--preserveWatchOutput", 'Use "preserveWatchOutput" option when using tsc watch mode.')
       .description("Build Nest application.")
-      .action(async (app: string, config: BuildOptions, command: Command) => {
+      .action(async (app: string, config: BuildOptions) => {
         const options: Input[] = [];
         const inputs: Input[] = [];
 
