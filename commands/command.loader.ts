@@ -1,9 +1,13 @@
-import chalk from "chalk";
 import { Command } from "commander";
-import { ERROR_PREFIX } from "../src/ui/prefix";
+import chalk from "chalk";
+
+import { BuildAction } from "../actions/build.action";
+import { BuildCommand } from "./build.command";
+import { ERROR_PREFIX } from "../src/ui";
 
 export class CommandLoader {
   public static async load(program: Command): Promise<void> {
+    await new BuildCommand(new BuildAction()).load(program);
     this.handleInvalidCommand(program);
   }
 
