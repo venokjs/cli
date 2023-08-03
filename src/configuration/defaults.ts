@@ -1,4 +1,3 @@
-// import { getDefaultTsconfigPath } from "../utils/get-default-tsconfig-path";
 import { Configuration } from "./configuration";
 import { getDefaultTsconfigPath } from "../helpers/getters/default.tsconfig.paths";
 
