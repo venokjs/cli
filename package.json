@@ -39,11 +39,16 @@
     "@swc/jest": "^0.2.27",
     "@types/jest": "^29.5.3",
     "chalk": "4.1.2",
+    "chokidar": "^3.5.3",
     "commander": "^11.0.0",
+    "ora": "^7.0.1",
+    "shelljs": "^0.8.5",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.1.6"
   },
   "devDependencies": {
     "@types/node": "^20.4.6",
+    "@types/shelljs": "^0.8.12",
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
     "eslint": "^8.46.0",
