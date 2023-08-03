@@ -1,6 +1,6 @@
 import { Command } from "commander";
 
-import { AbstractAction } from "../actions/abstract.action";
+import { AbstractAction } from "actions/abstract.action";
 
 export interface Input {
   name: string;
@@ -9,7 +9,7 @@ export interface Input {
 }
 
 export abstract class AbstractCommand {
-  protected constructor(protected action: AbstractAction) {}
+  constructor(protected action: AbstractAction) {}
 
   public abstract load(program: Command): void;
 }

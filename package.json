@@ -14,7 +14,7 @@
   "homepage": "https://github.com/venokjs/cli#readme",
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "tsc",
+    "build": "cross-env VENOK_CLI_DEV=true ts-node -r tsconfig-paths/register bin/venok.ts build",
     "clean": "rimraf ./dist",
     "start": "node ./dist/bin/venok.js",
     "test": "jest --config test/jest-config.js",
@@ -39,11 +39,18 @@
     "@swc/jest": "^0.2.27",
     "@types/jest": "^29.5.3",
     "chalk": "4.1.2",
+    "chokidar": "^3.5.3",
     "commander": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "rimraf": "4.4.1",
+    "shelljs": "^0.8.5",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.1.6"
   },
   "devDependencies": {
     "@types/node": "^20.4.6",
+    "@types/shelljs": "^0.8.12",
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
     "eslint": "^8.46.0",

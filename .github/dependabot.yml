@@ -15,3 +15,5 @@ updates:
       - "dependencies"
     ignore:
       - dependency-name: "chalk"
+      - dependency-name: "ora"
+      - dependency-name: "rimraf"
