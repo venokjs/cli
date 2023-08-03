@@ -21,7 +21,7 @@ interface CliOptions {
 }
 
 type SwcBinary = {
-  default: ({ cliOptions, swcOptions }: { cliOptions: CliOptions; swcOptions: Options }) => void;
+  default: ({ cliOptions, swcOptions }: { cliOptions: Partial<CliOptions>; swcOptions: Options }) => Promise<void>;
 };
 
 export class SwcBinaryLoader {
