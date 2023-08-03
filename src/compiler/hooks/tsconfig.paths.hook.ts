@@ -71,7 +71,14 @@ function getNotAliasedPath(sf: ts.SourceFile, matcher: tsPaths.MatchPath, text: 
     const packagePath = require.resolve(text, {
       paths: [process.cwd(), ...module.paths],
     });
-    if (packagePath) return text;
+
+    // From 0x303133
+    // We need to check if path contains "node_modules"
+    // Either we can catch bugs
+    // For ex. u can try to build venok cli with cli
+    // and remove `packagePath.includes("node_modules")`
+    // from check
+    if (packagePath && packagePath.includes("node_modules")) return text;
   } catch {}
 
   const resolvedPath = posix.relative(dirname(sf.fileName), result) || "./";
