@@ -1,5 +1,7 @@
 import chalk from "chalk";
 
+export const availableBuilders = ["tsc", "swc"];
+
 export const TSC_NO_ERRORS_MESSAGE = "Found 0 errors. Watching for file changes.";
 
 export const TSC_COMPILATION_STARTED_MESSAGE = "Starting compilation in watch mode...";
