@@ -2,9 +2,9 @@ import { dirname, join, sep } from "path";
 import chokidar from "chokidar";
 import shell from "shelljs";
 
-import { ActionOnFile, Asset, AssetEntry, Configuration } from "../configuration";
-import { getValueOrDefault } from "../helpers/getters/value.or.default";
-import { copyPathResolve } from "../helpers/getters/copy.path.resolve";
+import { ActionOnFile, Asset, AssetEntry, Configuration } from "src/configuration";
+import { getValueOrDefault } from "src/helpers/getters/value.or.default";
+import { copyPathResolve } from "src/helpers/getters/copy.path.resolve";
 
 export class AssetsManager {
   private watchAssetsKeyValue: { [key: string]: boolean } = {};

@@ -7,17 +7,18 @@ import chalk from "chalk";
 
 import { BaseCompiler } from "../base.compiler";
 
-import { FOUND_NO_ISSUES_GENERATING_METADATA, FOUND_NO_ISSUES_METADATA_GENERATION_SKIPPED, SWC_LOG_PREFIX } from "../constants";
-import { PluginMetadataGenerator } from "../plugins/plugin.metadata.generator";
-import { getValueOrDefault } from "../../helpers/getters/value.or.default";
-import { TypeCheckerHost } from "../plugins/type.checker.host";
-import { swcDefaultsFactory } from "../defaults/swc.default";
-import { PluginsLoader } from "../loaders/plugin.loader";
-import { SwcBinaryLoader } from "../loaders/swc.loader";
-import { treeKillSync } from "../../helpers/tree.kill";
-import { Configuration } from "../../configuration";
-import { AssetsManager } from "../assets.manager";
-import { ERROR_PREFIX } from "../../ui";
+import { FOUND_NO_ISSUES_GENERATING_METADATA, FOUND_NO_ISSUES_METADATA_GENERATION_SKIPPED, SWC_LOG_PREFIX } from "compiler/constants";
+import { PluginMetadataGenerator } from "compiler/plugins/plugin.metadata.generator";
+import { TypeCheckerHost } from "compiler/plugins/type.checker.host";
+import { swcDefaultsFactory } from "compiler/defaults/swc.default";
+import { PluginsLoader } from "compiler/loaders/plugin.loader";
+import { SwcBinaryLoader } from "compiler/loaders/swc.loader";
+import { AssetsManager } from "compiler/assets.manager";
+
+import { getValueOrDefault } from "src/helpers/getters/value.or.default";
+import { treeKillSync } from "src/helpers/tree.kill";
+import { Configuration } from "src/configuration";
+import { ERROR_PREFIX } from "src/ui";
 
 export type SwcCompilerExtras = {
   watch: boolean;

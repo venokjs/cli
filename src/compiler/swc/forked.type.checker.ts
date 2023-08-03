@@ -1,13 +1,15 @@
 import ts from "typescript";
 
-import { FOUND_NO_ISSUES_GENERATING_METADATA, FOUND_NO_ISSUES_METADATA_GENERATION_SKIPPED } from "../constants";
-import { PluginMetadataGenerator } from "../plugins/plugin.metadata.generator";
-import { TypeCheckerHost } from "../plugins/type.checker.host";
-import { PluginsLoader } from "../loaders/plugin.loader";
-import { Configuration } from "../../configuration";
+import { FOUND_NO_ISSUES_GENERATING_METADATA, FOUND_NO_ISSUES_METADATA_GENERATION_SKIPPED } from "compiler/constants";
+import { PluginMetadataGenerator } from "compiler/plugins/plugin.metadata.generator";
+import { TypeCheckerHost } from "compiler/plugins/type.checker.host";
+import { PluginsLoader } from "compiler/loaders/plugin.loader";
+import { BaseCompiler } from "compiler/base.compiler";
+
+import { Configuration } from "src/configuration";
+import { ERROR_PREFIX } from "src/ui";
+
 import { SwcCompilerExtras } from "./swc.compiler";
-import { BaseCompiler } from "../base.compiler";
-import { ERROR_PREFIX } from "../../ui";
 
 const [tsConfigPath, appName, sourceRoot, plugins] = process.argv.slice(2);
 

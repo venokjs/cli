@@ -1,8 +1,9 @@
 import { join } from "path";
 import ts from "typescript";
 
-import { CLI_ERRORS } from "../../ui";
-import { ReadonlyVisitor } from "../plugins/readonly.visitor.interface";
+import { ReadonlyVisitor } from "compiler/plugins/readonly.visitor.interface";
+
+import { CLI_ERRORS } from "src/ui";
 
 const PLUGIN_ENTRY_FILENAME = "plugin";
 

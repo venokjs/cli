@@ -2,7 +2,8 @@ import { dirname, posix } from "path";
 import ts from "typescript";
 import os from "os";
 
-import { TypeScriptBinaryLoader } from "../loaders/typescript.loader";
+import { TypeScriptBinaryLoader } from "compiler/loaders/typescript.loader";
+
 import tsPaths = require("tsconfig-paths");
 
 export function tsconfigPathsBeforeHookFactory(compilerOptions: ts.CompilerOptions) {

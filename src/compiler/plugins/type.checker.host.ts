@@ -2,9 +2,9 @@ import chalk from "chalk";
 import ora from "ora";
 import ts from "typescript";
 
-import { INITIALIZING_TYPE_CHECKER, TSC_LOG_ERROR_PREFIX, TSC_NO_ERRORS_MESSAGE } from "../constants";
-import { TypeScriptBinaryLoader } from "../loaders/typescript.loader";
-import { TsConfigProvider } from "../tsconfig.provider";
+import { INITIALIZING_TYPE_CHECKER, TSC_LOG_ERROR_PREFIX, TSC_NO_ERRORS_MESSAGE } from "compiler/constants";
+import { TypeScriptBinaryLoader } from "compiler/loaders/typescript.loader";
+import { TsConfigProvider } from "compiler/tsconfig.provider";
 
 export interface TypeCheckerHostRunOptions {
   watch?: boolean;

@@ -1,11 +1,12 @@
 import ts from "typescript";
 
-import { Configuration } from "../../configuration";
-import { tsconfigPathsBeforeHookFactory } from "../hooks/tsconfig.paths.hook";
-import { TypeScriptBinaryLoader } from "../loaders/typescript.loader";
-import { PluginsLoader } from "../loaders/plugin.loader";
-import { TsConfigProvider } from "../tsconfig.provider";
-import { BaseCompiler } from "../base.compiler";
+import { tsconfigPathsBeforeHookFactory } from "compiler/hooks/tsconfig.paths.hook";
+import { TypeScriptBinaryLoader } from "compiler/loaders/typescript.loader";
+import { PluginsLoader } from "compiler/loaders/plugin.loader";
+import { TsConfigProvider } from "compiler/tsconfig.provider";
+import { BaseCompiler } from "compiler/base.compiler";
+
+import { Configuration } from "src/configuration";
 
 export class TscCompiler extends BaseCompiler {
   constructor(

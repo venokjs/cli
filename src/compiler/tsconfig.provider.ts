@@ -3,7 +3,8 @@ import { join } from "path";
 import ts from "typescript";
 
 import { TypeScriptBinaryLoader } from "./loaders/typescript.loader";
-import { CLI_ERRORS } from "../ui";
+
+import { CLI_ERRORS } from "src/ui";
 
 export class TsConfigProvider {
   constructor(private readonly typescriptLoader: TypeScriptBinaryLoader) {}

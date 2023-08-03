@@ -1,5 +1,6 @@
-import { Input } from "../../../commands/abstract.command";
-import { Configuration } from "../../configuration";
+import { Input } from "commands/abstract.command";
+
+import { Configuration } from "src/configuration";
 
 type Keys = "path" | "entryFile" | "sourceRoot" | "exec" | "builder" | "typeCheck";
 

@@ -1,7 +1,7 @@
-import { Reader } from "../readers";
-import { Configuration } from "./configuration";
 import { ConfigurationLoader } from "./configuration.loader";
 import { defaultConfiguration } from "./defaults";
+import { Configuration } from "./configuration";
+import { Reader } from "src/readers";
 
 export class VenokConfigurationLoader implements ConfigurationLoader {
   constructor(private readonly reader: Reader) {}

@@ -1,22 +1,25 @@
 import chalk from "chalk";
 import ts from "typescript";
 
-import { VenokConfigurationLoader } from "../src/configuration/venok.configuration.loader";
-import { TypeScriptBinaryLoader } from "../src/compiler/loaders/typescript.loader";
-import { ConfigurationLoader } from "../src/configuration/configuration.loader";
-import { getValueOrDefault } from "../src/helpers/getters/value.or.default";
-import { getTscConfigPath } from "../src/helpers/getters/tsconfig.paths";
-import { PluginsLoader } from "../src/compiler/loaders/plugin.loader";
-import { TsConfigProvider } from "../src/compiler/tsconfig.provider";
-import { AssetsManager } from "../src/compiler/assets.manager";
-import { defaultOutDir } from "../src/configuration/defaults";
-import { WorkspaceHelper } from "../src/helpers/workspace";
-import { getBuilder } from "../src/helpers/getters/builder";
-import { Input } from "../commands/abstract.command";
-import { Configuration } from "../src/configuration";
+import { TypeScriptBinaryLoader } from "compiler/loaders/typescript.loader";
+import { PluginsLoader } from "compiler/loaders/plugin.loader";
+import { TsConfigProvider } from "compiler/tsconfig.provider";
+import { AssetsManager } from "compiler/assets.manager";
+
+import { VenokConfigurationLoader } from "src/configuration/venok.configuration.loader";
+import { ConfigurationLoader } from "src/configuration/configuration.loader";
+import { getValueOrDefault } from "src/helpers/getters/value.or.default";
+import { getTscConfigPath } from "src/helpers/getters/tsconfig.paths";
+import { defaultOutDir } from "src/configuration/defaults";
+import { getBuilder } from "src/helpers/getters/builder";
+import { WorkspaceHelper } from "src/helpers/workspace";
+import { Configuration } from "src/configuration";
+import { FileSystemReader } from "src/readers";
+import { ERROR_PREFIX } from "src/ui";
+
+import { Input } from "commands/abstract.command";
+
 import { AbstractAction } from "./abstract.action";
-import { FileSystemReader } from "../src/readers";
-import { ERROR_PREFIX } from "../src/ui";
 
 export class BuildAction extends AbstractAction {
   protected readonly pluginsLoader = new PluginsLoader();

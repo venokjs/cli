@@ -1,6 +1,6 @@
 import { Options } from "@swc/core";
 
-import { ERROR_PREFIX } from "../../ui";
+import { ERROR_PREFIX } from "src/ui";
 
 interface CliOptions {
   readonly outDir: string;

@@ -1,14 +1,15 @@
 import ts from "typescript";
 
-import { MultiVenokCompilerPlugins, PluginsLoader } from "../loaders/plugin.loader";
-import { displayManualRestartTip, listenForManualRestart } from "../manual.restart";
-import { tsconfigPathsBeforeHookFactory } from "../hooks/tsconfig.paths.hook";
-import { getValueOrDefault } from "../../helpers/getters/value.or.default";
-import { TypeScriptBinaryLoader } from "../loaders/typescript.loader";
-import { TsConfigProvider } from "../tsconfig.provider";
-import { Configuration } from "../../configuration";
-import { BaseCompiler } from "../base.compiler";
-import { CLI_ERRORS } from "../../ui";
+import { MultiVenokCompilerPlugins, PluginsLoader } from "compiler/loaders/plugin.loader";
+import { displayManualRestartTip, listenForManualRestart } from "compiler/manual.restart";
+import { tsconfigPathsBeforeHookFactory } from "compiler/hooks/tsconfig.paths.hook";
+import { TypeScriptBinaryLoader } from "compiler/loaders/typescript.loader";
+import { TsConfigProvider } from "compiler/tsconfig.provider";
+import { BaseCompiler } from "compiler/base.compiler";
+
+import { getValueOrDefault } from "src/helpers/getters/value.or.default";
+import { Configuration } from "src/configuration";
+import { CLI_ERRORS } from "src/ui";
 
 type TypescriptWatchCompilerExtras = {
   /**

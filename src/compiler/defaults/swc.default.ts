@@ -1,6 +1,6 @@
 import ts from "typescript";
 
-import { Configuration } from "../../configuration";
+import { Configuration } from "src/configuration";
 
 export const swcDefaultsFactory = (tsOptions?: ts.CompilerOptions, configuration?: Configuration) => {
   const builderOptions =

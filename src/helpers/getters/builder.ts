@@ -1,6 +1,8 @@
-import { Builder, Configuration } from "../../configuration";
-import { Input } from "../../../commands/abstract.command";
+import { Builder, Configuration } from "src/configuration";
+
 import { getValueOrDefault } from "./value.or.default";
+
+import { Input } from "commands/abstract.command";
 
 /**
  * Returns the builder to use for the given application.

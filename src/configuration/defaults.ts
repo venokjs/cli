@@ -1,5 +1,5 @@
 import { Configuration } from "./configuration";
-import { getDefaultTsconfigPath } from "../helpers/getters/default.tsconfig.paths";
+import { getDefaultTsconfigPath } from "src/helpers/getters/default.tsconfig.paths";
 
 export const defaultConfiguration: Required<Configuration> = {
   language: "ts",

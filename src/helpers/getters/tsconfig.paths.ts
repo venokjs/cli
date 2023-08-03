@@ -1,7 +1,9 @@
 import { getDefaultTsconfigPath } from "./default.tsconfig.paths";
-import { Builder, Configuration } from "../../configuration";
-import { Input } from "../../../commands/abstract.command";
 import { getValueOrDefault } from "./value.or.default";
+
+import { Builder, Configuration } from "src/configuration";
+
+import { Input } from "commands/abstract.command";
 
 /**
  * Returns the path to the tsc configuration file to use for the given application.

@@ -2,7 +2,7 @@
 import { program } from "commander";
 import process from "process";
 
-import { CommandLoader } from "../commands/command.loader";
+import { CommandLoader } from "commands/command.loader";
 
 const bootstrap = async () => {
   const pkg = process.env.VENOK_CLI_DEV ? "../package.json" : "../../package.json";

@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ES2021",
     "module": "commonjs",
+    "baseUrl": "./",
     "types": ["node", "jest"],
     "declaration": true,
     "inlineSourceMap": false,
@@ -10,7 +11,12 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "useUnknownInCatchVariables": true,
-    "skipLibCheck": true
+    "paths": {
+      "commands/*": ["commands/*"],
+      "actions/*": ["actions/*"],
+      "compiler/*": ["src/compiler/*"],
+      "src/*": ["src/*"]
+    }
   },
   "include": ["actions", "bin", "commands", "src"],
   "exclude": ["node_modules", "e2e"]

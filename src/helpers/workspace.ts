@@ -1,7 +1,8 @@
 import rimraf from "rimraf";
 
 import { getValueOrDefault } from "./getters/value.or.default";
-import { Configuration } from "../configuration";
+
+import { Configuration } from "src/configuration";
 
 export class WorkspaceHelper {
   public async deleteOutDirIfEnabled(configuration: Required<Configuration>, appName: string, dirPath: string) {

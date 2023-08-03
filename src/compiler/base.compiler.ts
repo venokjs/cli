@@ -1,8 +1,9 @@
 import { dirname, join, normalize, relative } from "path";
 
-import { getValueOrDefault } from "../helpers/getters/value.or.default";
+import { getValueOrDefault } from "src/helpers/getters/value.or.default";
+import { Configuration } from "src/configuration";
+
 import { PluginsLoader } from "./loaders/plugin.loader";
-import { Configuration } from "../configuration";
 
 export abstract class BaseCompiler<T = Record<string, any>> {
   constructor(private readonly pluginsLoader: PluginsLoader) {}

@@ -1,8 +1,9 @@
 import ts from "typescript";
 
+import { TypeScriptBinaryLoader } from "compiler/loaders/typescript.loader";
+import { FOUND_NO_ISSUES_GENERATING_METADATA } from "compiler/constants";
+
 import { DeepPluginMeta, ReadonlyVisitor } from "./readonly.visitor.interface";
-import { TypeScriptBinaryLoader } from "../loaders/typescript.loader";
-import { FOUND_NO_ISSUES_GENERATING_METADATA } from "../constants";
 import { PluginMetadataPrinter } from "./plugin.metadata.printer";
 import { TypeCheckerHost } from "./type.checker.host";
 

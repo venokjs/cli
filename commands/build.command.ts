@@ -1,9 +1,11 @@
 import { Command } from "commander";
 
-import { availableBuilders } from "../src/compiler/constants";
 import { AbstractCommand, Input } from "./abstract.command";
-import { ERROR_PREFIX, INFO_PREFIX } from "../src/ui";
-import { BuilderVariant } from "../src/configuration";
+
+import { availableBuilders } from "compiler/constants";
+
+import { ERROR_PREFIX, INFO_PREFIX } from "src/ui";
+import { BuilderVariant } from "src/configuration";
 
 interface BuildOptions {
   config: string;

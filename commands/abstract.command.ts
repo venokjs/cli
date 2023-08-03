@@ -1,6 +1,6 @@
 import { Command } from "commander";
 
-import { AbstractAction } from "../actions/abstract.action";
+import { AbstractAction } from "actions/abstract.action";
 
 export interface Input {
   name: string;
