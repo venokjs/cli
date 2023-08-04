@@ -28,7 +28,7 @@ export class BuildCommand extends AbstractCommand {
       .option("--watchAssets", "Watch non-ts (e.g., .graphql) files mode.")
       .option("--type-check", "Enable type checking (when SWC is used).")
       .option("--preserveWatchOutput", 'Use "preserveWatchOutput" option when using tsc watch mode.')
-      .description("Build Nest application.")
+      .description("Build Venok application.")
       .action(async (app: string, config: BuildOptions) => {
         const options: Input[] = [];
         const inputs: Input[] = [];

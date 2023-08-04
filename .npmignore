@@ -1,0 +1,7 @@
+.idea/
+src/
+bin/
+actions/
+commands/
+test/
+.github/

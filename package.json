@@ -1,9 +1,11 @@
 {
   "name": "@venok/cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Venok cli",
   "author": "0x303133",
-  "bin": "dist/bin/venok.js",
+  "bin": {
+    "venok": "dist/bin/venok.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/venokjs/cli.git"
